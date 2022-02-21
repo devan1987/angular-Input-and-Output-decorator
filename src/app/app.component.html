@@ -2,10 +2,10 @@
 <p>Start editing to see some magic happen :)</p>
 
 <input ngModel #user />
-<button (click)="onSubmit(user)">Submit</button>
+<button (click)="onSubmit(user,null)">Submit</button>
 <br />
 <br />
-<form #userForm="ngForm" (ngsubmit)="onSubmit(userForm)">
+<form #userForm="ngForm" (ngsubmit)="onSubmit(null,userForm)">
   <input name="name" ngModel required />
   {{
     userForm.submitted && userForm.form.controls.name.errors ? 'required' : ''

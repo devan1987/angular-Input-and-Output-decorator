@@ -8,8 +8,8 @@ import { Component, VERSION } from '@angular/core';
 export class AppComponent {
   name = 'Angular ' + VERSION.major;
 
-  onSubmit(userForm: any) {
-    alert('hii');
+  onSubmit(user:any, userForm:any) {
     console.log(userForm);
+    console.log(user);
   }
 }
